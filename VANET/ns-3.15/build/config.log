@@ -1,0 +1,643 @@
+# project ns (3.15) configured on Mon Dec 18 07:44:54 2017 by
+# waf 1.6.11 (abi 98, python 2070cf0 on linux2)
+# using ./waf configure --enable-examples --enable-tests
+#
+----------------------------------------
+Setting top to
+/home/bounabimouad/tp-mob/repo/VANET/ns-3.15
+----------------------------------------
+Setting out to
+/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/build
+----------------------------------------
+Checking for 'gcc' (c compiler)
+find program=['gcc', 'cc'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='CC' -> '/usr/bin/gcc'
+find program=['ar'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='AR' -> '/usr/bin/ar'
+/usr/bin/gcc
+----------------------------------------
+Checking for 'g++' (c++ compiler)
+find program=['g++', 'c++'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='CXX' -> '/usr/bin/g++'
+(tool ar is already loaded, skipping)
+/usr/bin/g++
+----------------------------------------
+Checking for program pkg-config
+/usr/bin/pkg-config
+find program=['pkg-config'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PKG_CONFIG' -> '/usr/bin/pkg-config'
+---------------------------------------------------------
+Checking for compilation flag -Wl,--soname=foo... support
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mcxx: build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/test.cc -> build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/test.cc.1.o
+[0m
+['/usr/bin/g++', '-Wall', '-Wl,--soname=foo', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cc', '-c', '-o', 'test.cc.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/test.cc.1.o -> build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cc.1.o', '-o', '/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+ok
+---------------------------------------------------------
+Checking for program python
+/usr/bin/python
+find program=['python'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PYTHON' -> '/usr/bin/python'
+['/usr/bin/python', '-c', 'import sys\nfor x in sys.version_info: print(str(x))']
+out: 2
+7
+12
+final
+0
+
+['/usr/bin/python', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_python_lib(standard_lib=0, prefix='/usr/local') or ''))"]
+out: '/usr/local/lib/python2.7/dist-packages'
+
+['/usr/bin/python', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_python_lib(plat_specific=1, standard_lib=0, prefix='/usr/local') or ''))"]
+out: '/usr/local/lib/python2.7/dist-packages'
+
+---------------------------------------------------------
+Checking for python version
+(2, 7, 12, 'final', 0)
+['/usr/bin/python', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_config_var('prefix') or ''))\nprint(repr(get_config_var('SO') or ''))\nprint(repr(get_config_var('LDFLAGS') or ''))\nprint(repr(get_config_var('LIBDIR') or ''))\nprint(repr(get_config_var('LIBPL') or ''))\nprint(repr(get_config_var('INCLUDEPY') or ''))\nprint(repr(get_config_var('Py_ENABLE_SHARED') or ''))\nprint(repr(get_config_var('MACOSX_DEPLOYMENT_TARGET') or ''))\nprint(repr(get_config_var('LDSHARED') or ''))\nprint(repr(get_config_var('CFLAGS') or ''))"]
+out: '/usr'
+'.so'
+'-Wl,-Bsymbolic-functions -Wl,-z,relro'
+'/usr/lib'
+'/usr/lib/python2.7/config-x86_64-linux-gnu'
+'/usr/include/python2.7'
+1
+''
+'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  '
+'-fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  '
+
+Configuration returned from ['/usr/bin/python']:
+"prefix = '/usr'\nSO = '.so'\nLDFLAGS = '-Wl,-Bsymbolic-functions -Wl,-z,relro'\nLIBDIR = '/usr/lib'\nLIBPL = '/usr/lib/python2.7/config-x86_64-linux-gnu'\nINCLUDEPY = '/usr/include/python2.7'\nPy_ENABLE_SHARED = 1\nMACOSX_DEPLOYMENT_TARGET = ''\nLDSHARED = 'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  '\nCFLAGS = '-fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  '"
+
+
+
+# try again with -L$python_LIBDIR: ['/usr/lib']
+
+---------------------------------------------------------
+Checking for library python2.7 in LIBDIR
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_9a1d0551212c9d703363e62dfbc51c79/test.cpp -> build/.conf_check_9a1d0551212c9d703363e62dfbc51c79/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-Wall', '-fno-strict-aliasing', '-fwrapv', '-fstack-protector-strong', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_9a1d0551212c9d703363e62dfbc51c79/testbuild/test.cpp.1.o -> build/.conf_check_9a1d0551212c9d703363e62dfbc51c79/testbuild/testprog
+[0m
+['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/build/.conf_check_9a1d0551212c9d703363e62dfbc51c79/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib', '-lpython2.7']
+yes
+-------------------------------------------------------------------------
+Checking for program python2.7-config,python-config-2.7,python2.7m-config
+/usr/bin/python2.7-config
+find program=['python2.7-config', 'python-config-2.7', 'python2.7m-config'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PYTHON_CONFIG' -> '/usr/bin/python2.7-config'
+['/usr/bin/python2.7-config', '--includes']
+out: -I/usr/include/python2.7 -I/usr/include/x86_64-linux-gnu/python2.7
+
+Include path for Python extensions (found via python-config --includes): ['/usr/include/python2.7', '/usr/include/x86_64-linux-gnu/python2.7']
+
+-------------------------------------------------------------------------
+Checking for header Python.h
+==>
+
+#include <Python.h>
+#ifdef __cplusplus
+extern "C" {
+#endif
+	void Py_Initialize(void);
+	void Py_Finalize(void);
+#ifdef __cplusplus
+}
+#endif
+int main()
+{
+   Py_Initialize();
+   Py_Finalize();
+   return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_d6c8946949ece91ce43c989711393fec/test.cpp -> build/.conf_check_d6c8946949ece91ce43c989711393fec/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-Wall', '-fno-strict-aliasing', '-fwrapv', '-fstack-protector-strong', '-fno-strict-aliasing', '-I/usr/include/python2.7', '-I/usr/include/x86_64-linux-gnu/python2.7', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_d6c8946949ece91ce43c989711393fec/testbuild/test.cpp.1.o -> build/.conf_check_d6c8946949ece91ce43c989711393fec/testbuild/testprog
+[0m
+['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/build/.conf_check_d6c8946949ece91ce43c989711393fec/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib', '-lpython2.7']
+yes
+-------------------------------------------------------------------------
+Checking for compilation flag -fvisibility=hidden... support
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mcxx: build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/test.cc -> build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/test.cc.1.o
+[0m
+['/usr/bin/g++', '-Wall', '-fvisibility=hidden', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYTHON_H=1', '../test.cc', '-c', '-o', 'test.cc.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/test.cc.1.o -> build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cc.1.o', '-o', '/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+ok
+-------------------------------------------------------------------------
+Checking for compilation flag -Wno-array-bounds... support
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mcxx: build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/test.cc -> build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/test.cc.1.o
+[0m
+['/usr/bin/g++', '-Wall', '-Wno-array-bounds', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYTHON_H=1', '../test.cc', '-c', '-o', 'test.cc.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/test.cc.1.o -> build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cc.1.o', '-o', '/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/build/.conf_check_fe0ca542f39064c5a14ee41a2e983996/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+ok
+-------------------------------------------------------------------------
+Checking for pybindgen location
+not found
+-------------------------------------------------------------------------
+Python module pybindgen
+['/usr/bin/python', '-c', "\nimport pybindgen as current_module\nversion = getattr(current_module, '__version__', None)\nif version is not None:\n    print(str(version))\nelse:\n    print('unknown version')\n"]
+err: Traceback (most recent call last):
+  File "<string>", line 2, in <module>
+ImportError: No module named pybindgen
+
+not found
+from /home/bounabimouad/tp-mob/repo/VANET/ns-3.15/bindings/python: Could not find the python module 'pybindgen'
+-------------------------------------------------------------------------
+Checking for click location
+not found
+-------------------------------------------------------------------------
+Checking for pkg-config flags for GTK_CONFIG_STORE
+['/usr/bin/pkg-config', '--cflags', '--libs', 'gtk+-2.0 >= 2.12']: '' (exit code 1)
+Package gtk+-2.0 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `gtk+-2.0.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'gtk+-2.0' found
+
+not found
+-------------------------------------------------------------------------
+Checking for pkg-config flags for LIBXML2
+['/usr/bin/pkg-config', '--cflags', '--libs', 'libxml-2.0 >= 2.6']: '-I/usr/include/libxml2 -lxml2\n' (exit code 0)
+
+ok
+-------------------------------------------------------------------------
+Checking for type uint128_t
+==>
+#include <stdint.h>
+
+int main() {
+	if ((uint128_t *) 0) return 0;
+	if (sizeof (uint128_t)) return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_9a9aa0a48a7447bdd461f06307f32dc7/test.cpp -> build/.conf_check_9a9aa0a48a7447bdd461f06307f32dc7/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-Wall', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+err: ../test.cpp: In function ‘int main()’:
+../test.cpp:4:7: error: ‘uint128_t’ was not declared in this scope
+  if ((uint128_t *) 0) return 0;
+       ^
+../test.cpp:4:18: error: expected primary-expression before ‘)’ token
+  if ((uint128_t *) 0) return 0;
+                  ^
+../test.cpp:4:20: error: expected ‘)’ before numeric constant
+  if ((uint128_t *) 0) return 0;
+                    ^
+../test.cpp:5:14: error: ‘uint128_t’ was not declared in this scope
+  if (sizeof (uint128_t)) return 0;
+              ^
+
+from /home/bounabimouad/tp-mob/repo/VANET/ns-3.15/src/core: Test does not build: Traceback (most recent call last):
+  File "/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/.waf-1.6.11-30618c54883417962c38f5d395f83584/waflib/Tools/c_config.py", line 445, in run_c_code
+    bld.compile()
+  File "/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/.waf-1.6.11-30618c54883417962c38f5d395f83584/waflib/Build.py", line 190, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed (exit status 1): 
+	{task 139666953068112: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-Wall', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+
+not found
+from /home/bounabimouad/tp-mob/repo/VANET/ns-3.15/src/core: The configuration failed
+-------------------------------------------------------------------------
+Checking for type __uint128_t
+==>
+#include <stdint.h>
+
+int main() {
+	if ((__uint128_t *) 0) return 0;
+	if (sizeof (__uint128_t)) return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_703a8a276d4ad265d967b1b45f1fc578/test.cpp -> build/.conf_check_703a8a276d4ad265d967b1b45f1fc578/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-Wall', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_703a8a276d4ad265d967b1b45f1fc578/testbuild/test.cpp.1.o -> build/.conf_check_703a8a276d4ad265d967b1b45f1fc578/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/build/.conf_check_703a8a276d4ad265d967b1b45f1fc578/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-------------------------------------------------------------------------
+Checking high precision time implementation
+128-bit integer
+-------------------------------------------------------------------------
+Checking for header stdint.h
+==>
+#include <stdint.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_c59373285bc13999c3df79164cb29af1/test.cpp -> build/.conf_check_c59373285bc13999c3df79164cb29af1/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-Wall', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_c59373285bc13999c3df79164cb29af1/testbuild/test.cpp.1.o -> build/.conf_check_c59373285bc13999c3df79164cb29af1/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/build/.conf_check_c59373285bc13999c3df79164cb29af1/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-------------------------------------------------------------------------
+Checking for header inttypes.h
+==>
+#include <inttypes.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_591f7be6a22ba3cd4f507fd8bc09bd2a/test.cpp -> build/.conf_check_591f7be6a22ba3cd4f507fd8bc09bd2a/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-Wall', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_591f7be6a22ba3cd4f507fd8bc09bd2a/testbuild/test.cpp.1.o -> build/.conf_check_591f7be6a22ba3cd4f507fd8bc09bd2a/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/build/.conf_check_591f7be6a22ba3cd4f507fd8bc09bd2a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-------------------------------------------------------------------------
+Checking for header sys/inttypes.h
+==>
+#include <sys/inttypes.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_2ca1edb217ad9cef6c81468eb5adffbb/test.cpp -> build/.conf_check_2ca1edb217ad9cef6c81468eb5adffbb/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-Wall', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+err: ../test.cpp:1:26: fatal error: sys/inttypes.h: No such file or directory
+compilation terminated.
+
+from /home/bounabimouad/tp-mob/repo/VANET/ns-3.15/src/core: Test does not build: Traceback (most recent call last):
+  File "/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/.waf-1.6.11-30618c54883417962c38f5d395f83584/waflib/Tools/c_config.py", line 445, in run_c_code
+    bld.compile()
+  File "/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/.waf-1.6.11-30618c54883417962c38f5d395f83584/waflib/Build.py", line 190, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed (exit status 1): 
+	{task 139666953216528: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-Wall', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+
+not found
+from /home/bounabimouad/tp-mob/repo/VANET/ns-3.15/src/core: The configuration failed
+-------------------------------------------------------------------------
+Checking for header sys/types.h
+==>
+#include <sys/types.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_293985459965597c97c3759b44ed252b/test.cpp -> build/.conf_check_293985459965597c97c3759b44ed252b/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-Wall', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_293985459965597c97c3759b44ed252b/testbuild/test.cpp.1.o -> build/.conf_check_293985459965597c97c3759b44ed252b/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/build/.conf_check_293985459965597c97c3759b44ed252b/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-------------------------------------------------------------------------
+Checking for header sys/stat.h
+==>
+#include <sys/stat.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_114df6287ed99356d14a06682bc98197/test.cpp -> build/.conf_check_114df6287ed99356d14a06682bc98197/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-Wall', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_114df6287ed99356d14a06682bc98197/testbuild/test.cpp.1.o -> build/.conf_check_114df6287ed99356d14a06682bc98197/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/build/.conf_check_114df6287ed99356d14a06682bc98197/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-------------------------------------------------------------------------
+Checking for header dirent.h
+==>
+#include <dirent.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_38008f7ca978e5462e378992d39050f1/test.cpp -> build/.conf_check_38008f7ca978e5462e378992d39050f1/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-Wall', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_38008f7ca978e5462e378992d39050f1/testbuild/test.cpp.1.o -> build/.conf_check_38008f7ca978e5462e378992d39050f1/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/build/.conf_check_38008f7ca978e5462e378992d39050f1/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-------------------------------------------------------------------------
+Checking for header stdlib.h
+==>
+#include <stdlib.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_29f41b0aad55c9546dfc9b7ce9859059/test.cpp -> build/.conf_check_29f41b0aad55c9546dfc9b7ce9859059/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-Wall', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_29f41b0aad55c9546dfc9b7ce9859059/testbuild/test.cpp.1.o -> build/.conf_check_29f41b0aad55c9546dfc9b7ce9859059/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/build/.conf_check_29f41b0aad55c9546dfc9b7ce9859059/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-------------------------------------------------------------------------
+Checking for header signal.h
+==>
+#include <signal.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_cc227f9b4319ad1c726eca4fb806395e/test.cpp -> build/.conf_check_cc227f9b4319ad1c726eca4fb806395e/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-Wall', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_cc227f9b4319ad1c726eca4fb806395e/testbuild/test.cpp.1.o -> build/.conf_check_cc227f9b4319ad1c726eca4fb806395e/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/build/.conf_check_cc227f9b4319ad1c726eca4fb806395e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-------------------------------------------------------------------------
+Checking for header pthread.h
+==>
+
+#include <pthread.h>
+int main ()
+{
+   pthread_mutex_t m;
+   pthread_mutex_init (&m, NULL);
+   return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_2be466e82e703a744ee152afe2b58299/test.cpp -> build/.conf_check_2be466e82e703a744ee152afe2b58299/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-Wall', '-pthread', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_2be466e82e703a744ee152afe2b58299/testbuild/test.cpp.1.o -> build/.conf_check_2be466e82e703a744ee152afe2b58299/testbuild/testprog
+[0m
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/build/.conf_check_2be466e82e703a744ee152afe2b58299/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-------------------------------------------------------------------------
+Checking for header stdint.h
+==>
+#include <stdint.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_c59373285bc13999c3df79164cb29af1/test.cpp -> build/.conf_check_c59373285bc13999c3df79164cb29af1/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-Wall', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_c59373285bc13999c3df79164cb29af1/testbuild/test.cpp.1.o -> build/.conf_check_c59373285bc13999c3df79164cb29af1/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/build/.conf_check_c59373285bc13999c3df79164cb29af1/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-------------------------------------------------------------------------
+Checking for header inttypes.h
+==>
+#include <inttypes.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_591f7be6a22ba3cd4f507fd8bc09bd2a/test.cpp -> build/.conf_check_591f7be6a22ba3cd4f507fd8bc09bd2a/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-Wall', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_591f7be6a22ba3cd4f507fd8bc09bd2a/testbuild/test.cpp.1.o -> build/.conf_check_591f7be6a22ba3cd4f507fd8bc09bd2a/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/build/.conf_check_591f7be6a22ba3cd4f507fd8bc09bd2a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-------------------------------------------------------------------------
+Checking for header sys/inttypes.h
+==>
+#include <sys/inttypes.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_2ca1edb217ad9cef6c81468eb5adffbb/test.cpp -> build/.conf_check_2ca1edb217ad9cef6c81468eb5adffbb/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-Wall', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+err: ../test.cpp:1:26: fatal error: sys/inttypes.h: No such file or directory
+compilation terminated.
+
+from /home/bounabimouad/tp-mob/repo/VANET/ns-3.15/src/core: Test does not build: Traceback (most recent call last):
+  File "/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/.waf-1.6.11-30618c54883417962c38f5d395f83584/waflib/Tools/c_config.py", line 445, in run_c_code
+    bld.compile()
+  File "/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/.waf-1.6.11-30618c54883417962c38f5d395f83584/waflib/Build.py", line 190, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed (exit status 1): 
+	{task 139666953296528: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-Wall', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+
+not found
+from /home/bounabimouad/tp-mob/repo/VANET/ns-3.15/src/core: The configuration failed
+-------------------------------------------------------------------------
+Checking for library rt
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_fc0bab0b855f90bf0795892663948c43/test.cpp -> build/.conf_check_fc0bab0b855f90bf0795892663948c43/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-Wall', '-pthread', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_fc0bab0b855f90bf0795892663948c43/testbuild/test.cpp.1.o -> build/.conf_check_fc0bab0b855f90bf0795892663948c43/testbuild/testprog
+[0m
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/build/.conf_check_fc0bab0b855f90bf0795892663948c43/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lrt']
+yes
+-------------------------------------------------------------------------
+Checking for header netpacket/packet.h
+==>
+#include <netpacket/packet.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0927534631877d46f179382e3e16c60a/test.cpp -> build/.conf_check_0927534631877d46f179382e3e16c60a/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-Wall', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_0927534631877d46f179382e3e16c60a/testbuild/test.cpp.1.o -> build/.conf_check_0927534631877d46f179382e3e16c60a/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/build/.conf_check_0927534631877d46f179382e3e16c60a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-------------------------------------------------------------------------
+Checking for NSC location
+not found
+-------------------------------------------------------------------------
+Checking boost includes
+from /home/bounabimouad/tp-mob/repo/VANET/ns-3.15/src/openflow: headers not found, use --boost-includes=/path/to/boost
+not found
+-------------------------------------------------------------------------
+Checking for pkg-config flags for IT++
+['/usr/bin/pkg-config', '--cflags', '--libs', 'itpp']: '-litpp\n' (exit code 0)
+
+ok
+-------------------------------------------------------------------------
+Checking for library sqlite3
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_39b3cecfac3989b2ed760243cef109e6/test.cpp -> build/.conf_check_39b3cecfac3989b2ed760243cef109e6/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-Wall', '-DNO_INT_SIZE_CHECK', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_PACKET_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_39b3cecfac3989b2ed760243cef109e6/testbuild/test.cpp.1.o -> build/.conf_check_39b3cecfac3989b2ed760243cef109e6/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/build/.conf_check_39b3cecfac3989b2ed760243cef109e6/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lsqlite3']
+err: /usr/bin/ld: cannot find -lsqlite3
+collect2: error: ld returned 1 exit status
+
+from /home/bounabimouad/tp-mob/repo/VANET/ns-3.15/src/stats: Test does not build: Traceback (most recent call last):
+  File "/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/.waf-1.6.11-30618c54883417962c38f5d395f83584/waflib/Tools/c_config.py", line 445, in run_c_code
+    bld.compile()
+  File "/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/.waf-1.6.11-30618c54883417962c38f5d395f83584/waflib/Build.py", line 190, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed (exit status 1): 
+	{task 139666953149264: cxxprogram test.cpp.1.o -> testprog}
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/build/.conf_check_39b3cecfac3989b2ed760243cef109e6/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lsqlite3']
+
+not found
+from /home/bounabimouad/tp-mob/repo/VANET/ns-3.15/src/stats: The configuration failed
+-------------------------------------------------------------------------
+Checking for pkg-config flags for SQLITE3
+['/usr/bin/pkg-config', '--cflags', '--libs', 'sqlite3']: '' (exit code 1)
+Package sqlite3 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `sqlite3.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'sqlite3' found
+
+not found
+-------------------------------------------------------------------------
+Checking for header linux/if_tun.h
+==>
+#include <linux/if_tun.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_e2bf758aaca47858b67848f504a8de27/test.cpp -> build/.conf_check_e2bf758aaca47858b67848f504a8de27/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-Wall', '-DNO_INT_SIZE_CHECK', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_PACKET_H=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_e2bf758aaca47858b67848f504a8de27/testbuild/test.cpp.1.o -> build/.conf_check_e2bf758aaca47858b67848f504a8de27/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/build/.conf_check_e2bf758aaca47858b67848f504a8de27/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+-------------------------------------------------------------------------
+Checking for program sudo
+/usr/bin/sudo
+find program=['sudo'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='SUDO' -> '/usr/bin/sudo'
+-------------------------------------------------------------------------
+Checking for program valgrind
+not found
+find program=['valgrind'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='VALGRIND' -> ''
+from /home/bounabimouad/tp-mob/repo/VANET/ns-3.15: Could not find the program valgrind
+-------------------------------------------------------------------------
+Checking for pkg-config flags for GSL
+['/usr/bin/pkg-config', '--cflags', '--libs', 'gsl']: '' (exit code 1)
+Package gsl was not found in the pkg-config search path.
+Perhaps you should add the directory containing `gsl.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'gsl' found
+
+not found
+-------------------------------------------------------------------------
+Checking for compilation flag -Wno-error=deprecated-d... support
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mc: build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/test.c -> build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-Wall', '-Wno-error=deprecated-declarations', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/testbuild/test.c.1.o -> build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+ok
+-------------------------------------------------------------------------
+Checking for compilation flag -fstrict-aliasing... support
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mc: build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/test.c -> build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-Wall', '-fstrict-aliasing', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/testbuild/test.c.1.o -> build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+ok
+-------------------------------------------------------------------------
+Checking for compilation flag -Wstrict-aliasing... support
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mc: build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/test.c -> build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-Wall', '-Wstrict-aliasing', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/testbuild/test.c.1.o -> build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/home/bounabimouad/tp-mob/repo/VANET/ns-3.15/build/.conf_check_d8a2c40aecfb7c8eac7dd03fcbfb1110/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+ok
+-------------------------------------------------------------------------
+Checking for program doxygen
+not found
+find program=['doxygen'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='DOXYGEN' -> ''
+from /home/bounabimouad/tp-mob/repo/VANET/ns-3.15: Could not find the program doxygen

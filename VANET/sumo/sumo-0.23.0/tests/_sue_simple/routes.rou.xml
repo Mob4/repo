@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Sat Nov 29 00:42:18 2014 by SUMO marouter Version dev-SVN-r17396
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/marouterConfiguration.xsd">
+
+    <input>
+        <net-file value="input_net.net.xml"/>
+        <additional-files value="input_taz.taz.xml"/>
+        <od-matrix-files value="input_od_vm.fma"/>
+    </input>
+
+    <output>
+        <flow-output value="routes.rou.xml"/>
+    </output>
+
+    <processing>
+        <assignment-method value="SUE"/>
+        <paths value="3"/>
+    </processing>
+
+    <report>
+        <xml-validation value="never"/>
+    </report>
+
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <flow id="0" begin="0.00" end="86400.00" number="800" type="1" fromTaz="91" toTaz="93" departLane="free" departSpeed="max">
+        <routeDistribution>
+            <route cost="659.13" probability="206.24570863" edges="D1 L2 L5 L7 L6 L10 L13 L15 L16 D3"/>
+            <route cost="641.52" probability="245.97730242" edges="D1 L2 L5 L8 L9 L14 L15 L16 D3"/>
+            <route cost="674.59" probability="176.76914458" edges="D1 L2 L4 L12 L16 D3"/>
+            <route cost="677.87" probability="171.00784437" edges="D1 L2 L5 L7 L6 L11 L15 L16 D3"/>
+        </routeDistribution>
+    </flow>
+    <flow id="1" begin="0.00" end="86400.00" number="200" type="1" fromTaz="92" toTaz="93" departLane="free" departSpeed="max">
+        <routeDistribution>
+            <route cost="590.21" probability="51.56029507" edges="D2 L3 L5 L7 L6 L10 L13 L15 L16 D3"/>
+            <route cost="572.60" probability="61.49395716" edges="D2 L3 L5 L8 L9 L14 L15 L16 D3"/>
+            <route cost="605.67" probability="44.19470593" edges="D2 L3 L4 L12 L16 D3"/>
+            <route cost="608.94" probability="42.75104183" edges="D2 L3 L5 L7 L6 L11 L15 L16 D3"/>
+        </routeDistribution>
+    </flow>
+</routes>

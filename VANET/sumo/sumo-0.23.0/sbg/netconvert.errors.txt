@@ -1,0 +1,53 @@
+Warning: Discarding unusable type "waterway.river" (first occurence for edge "25980164").
+Warning: Discarding unusable type "waterway.riverbank" (first occurence for edge "43570553#0").
+Warning: Discarding unusable type "waterway.stream" (first occurence for edge "167301074").
+Warning: No way found for reference '126631258' in relation '4803287'
+Warning: Ignoring restriction relation '4803287' with unknown from-way.
+Warning: No way found for reference '339098109' in relation '4803288'
+Warning: Ignoring restriction relation '4803288' with unknown to-way.
+Warning: Found sharp turn with radius 5.91 at the end of edge -161296955#2
+Warning: Found sharp turn with radius 5.63 at the start of edge -173340813
+Warning: Found sharp turn with radius 6.37 at the start of edge -183323049#0
+Warning: Found sharp turn with radius 6.51 at the start of edge -183786379#2
+Warning: Found sharp turn with radius 8.44 at the end of edge -183786379#2
+Warning: Found sharp turn with radius 6.59 at the start of edge -183786380#0
+Warning: Found sharp turn with radius 4.72 at the start of edge -183786381#3
+Warning: Found sharp turn with radius 2.67 at the end of edge -183786381#3
+Warning: Found sharp turn with radius 4.42 at the start of edge -357277832#1
+Warning: Found sharp turn with radius 7.84 at the end of edge -52994469#5
+Warning: Found sharp turn with radius 5.26 at the start of edge 161017683
+Warning: Found sharp turn with radius 6.40 at the end of edge 161068301#0
+Warning: Found sharp turn with radius 5.91 at the start of edge 161296955#2
+Warning: Found sharp turn with radius 5.63 at the end of edge 173340813
+Warning: Found sharp turn with radius 6.37 at the end of edge 183323049#0
+Warning: Found sharp turn with radius 8.44 at the start of edge 183786379#2
+Warning: Found sharp turn with radius 6.51 at the end of edge 183786379#2
+Warning: Found sharp turn with radius 6.59 at the end of edge 183786380#0
+Warning: Found sharp turn with radius 2.67 at the start of edge 183786381#3
+Warning: Found sharp turn with radius 4.72 at the end of edge 183786381#3
+Warning: Found sharp turn with radius 8.74 at the start of edge 183799164#4
+Warning: Found sharp turn with radius 3.78 at the start of edge 24298103#0
+Warning: Found sharp turn with radius 6.10 at the end of edge 24298103#0
+Warning: Found sharp turn with radius 8.13 at the start of edge 24912627#1
+Warning: Found sharp turn with radius 5.46 at the end of edge 24912627#9
+Warning: Found sharp turn with radius 4.80 at the end of edge 28360727#4
+Warning: Found sharp turn with radius 2.26 at the start of edge 299991600
+Warning: Found sharp turn with radius 4.42 at the end of edge 357277832#1
+Warning: Found sharp turn with radius 7.84 at the start of edge 52994469#5
+Warning: Junction shape for '1032022325' has distance 41.53 to its given position
+Warning: Junction shape for '1032022603' has distance 27.35 to its given position
+Warning: Junction shape for '1032022671' has distance 30.71 to its given position
+Warning: Junction shape for '1032023507' has distance 39.36 to its given position
+Warning: Junction shape for '2906898346' has distance 40.97 to its given position
+Warning: Junction shape for '555162794' has distance 33.82 to its given position
+Warning: Junction shape for '83117097' has distance 38.58 to its given position
+Warning: The traffic light '1403331869' does not control any links; it will not be build.
+Warning: Could not build program '0' for traffic light '1403331869'
+Warning: The traffic light '1403331873' does not control any links; it will not be build.
+Warning: Could not build program '0' for traffic light '1403331873'
+Warning: The traffic light '1841716726' does not control any links; it will not be build.
+Warning: Could not build program '0' for traffic light '1841716726'
+Warning: The traffic light '223452809' does not control any links; it will not be build.
+Warning: Could not build program '0' for traffic light '223452809'
+Warning: The traffic light '263337230' does not control any links; it will not be build.
+Warning: Could not build program '0' for traffic light '263337230'

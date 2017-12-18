@@ -1,0 +1,32 @@
+## -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+def build(bld):
+    module = bld.create_ns3_module('clwpr', ['internet', 'config-store', 'tools', 'point-to-point', 'wifi', 'mobility', 'applications', 'csma'])
+    module.includes = '.'
+    module.source = [
+        'model/clwpr-header.cc',
+        'model/clwpr-state.cc',
+        'model/clwpr-routing-protocol.cc',
+        'helper/clwpr-helper.cc',
+        'model/clwpr-rqueue.cc',
+        ]
+    module_test = bld.create_ns3_module_test_library('clwpr')
+    module_test.source = [
+        'test/bug780-test.cc',
+        ]
+#    headers = bld.new_task_gen('ns3header')
+    headers = bld.new_task_gen(features=['ns3header'])
+    headers.module = 'clwpr'
+    headers.source = [
+        'model/clwpr-routing-protocol.h',
+        'model/clwpr-header.h',
+        'model/clwpr-state.h',
+        'model/clwpr-repositories.h',
+        'model/clwpr-rqueue.h',
+        'helper/clwpr-helper.h',
+        'model/deferred-tag.h',
+        ]
+
+
+    if bld.env['ENABLE_EXAMPLES']:
+        bld.add_subdirs('examples')

@@ -1,0 +1,35 @@
+var class_g_u_i_perspective_changer =
+[
+    [ "MouseState", "d1/d4e/class_g_u_i_perspective_changer.html#aa1d20f71cd180ca3a99c993a63aa7068", [
+      [ "MOUSEBTN_NONE", "d1/d4e/class_g_u_i_perspective_changer.html#aa1d20f71cd180ca3a99c993a63aa7068a7b180d829404195f2773b39f964c2722", null ],
+      [ "MOUSEBTN_LEFT", "d1/d4e/class_g_u_i_perspective_changer.html#aa1d20f71cd180ca3a99c993a63aa7068ae002d7a56c87087d46fea3203e6de8bc", null ],
+      [ "MOUSEBTN_RIGHT", "d1/d4e/class_g_u_i_perspective_changer.html#aa1d20f71cd180ca3a99c993a63aa7068a575a08f4e0ab09eb06c674950ed0ec49", null ],
+      [ "MOUSEBTN_MIDDLE", "d1/d4e/class_g_u_i_perspective_changer.html#aa1d20f71cd180ca3a99c993a63aa7068ac04ec6abf0e3225d5f3378e688aa0d85", null ]
+    ] ],
+    [ "GUIPerspectiveChanger", "d1/d4e/class_g_u_i_perspective_changer.html#a4b4906d6ee1e7b83bb37096750999e3b", null ],
+    [ "~GUIPerspectiveChanger", "d1/d4e/class_g_u_i_perspective_changer.html#a3e589382320fe570fabad9e8013a23c0", null ],
+    [ "GUIPerspectiveChanger", "d1/d4e/class_g_u_i_perspective_changer.html#a6173aebef4b19067462021951876be63", null ],
+    [ "centerTo", "d1/d4e/class_g_u_i_perspective_changer.html#a17956d392bf6ff01d9616b0e66778050", null ],
+    [ "changeCanvassLeft", "d1/d4e/class_g_u_i_perspective_changer.html#a030dbb3c5097aaa3d6d1cce39bd0cfa9", null ],
+    [ "getMouseXPosition", "d1/d4e/class_g_u_i_perspective_changer.html#aab2712991d3a25431de2a2eb2927d4b5", null ],
+    [ "getMouseYPosition", "d1/d4e/class_g_u_i_perspective_changer.html#aa921e0d5c70a1235c28e13d3ef37f7be", null ],
+    [ "getRotation", "d1/d4e/class_g_u_i_perspective_changer.html#acf8b4103be5936331bb385004e82c7a1", null ],
+    [ "getViewport", "d1/d4e/class_g_u_i_perspective_changer.html#aea56ecc20db34c280f8f6fc2f2030bd4", null ],
+    [ "getXPos", "d1/d4e/class_g_u_i_perspective_changer.html#a62baa29ee8d9e12cde85b816ce34f85e", null ],
+    [ "getYPos", "d1/d4e/class_g_u_i_perspective_changer.html#a6df84b97f6dd25f4ff750ed91c6b1aba", null ],
+    [ "getZoom", "d1/d4e/class_g_u_i_perspective_changer.html#aae37ebcfff45a2726cf3d65c6a8a33d5", null ],
+    [ "onLeftBtnPress", "d1/d4e/class_g_u_i_perspective_changer.html#a592150ee909652f9db4a052adbb562a7", null ],
+    [ "onLeftBtnRelease", "d1/d4e/class_g_u_i_perspective_changer.html#a4002c8e33690cc25c95e682b4429a4be", null ],
+    [ "onMouseMove", "d1/d4e/class_g_u_i_perspective_changer.html#acce5c48a9721184932a23cc4f365efb7", null ],
+    [ "onMouseWheel", "d1/d4e/class_g_u_i_perspective_changer.html#adef5b9adf4230d9832682ed0b6ca12c3", null ],
+    [ "onRightBtnPress", "d1/d4e/class_g_u_i_perspective_changer.html#a30798ea3e33a035f8281ca53cf393af3", null ],
+    [ "onRightBtnRelease", "d1/d4e/class_g_u_i_perspective_changer.html#ae56a2138c7167006f524ec686b562c92", null ],
+    [ "operator=", "d1/d4e/class_g_u_i_perspective_changer.html#ad58de62faf6924486dda62986db1973d", null ],
+    [ "patchedViewPort", "d1/d4e/class_g_u_i_perspective_changer.html#ab89e2fb017cd105d34fe4c294632a20a", null ],
+    [ "setViewport", "d1/d4e/class_g_u_i_perspective_changer.html#a87e5b65eaad33258cc5cbe408b6030e0", null ],
+    [ "setViewport", "d1/d4e/class_g_u_i_perspective_changer.html#ac790b90af83f4577ad07fca50640ad69", null ],
+    [ "myCallback", "d1/d4e/class_g_u_i_perspective_changer.html#a04c47f2f2aedd46a5b7dded576de25d4", null ],
+    [ "myMouseXPosition", "d1/d4e/class_g_u_i_perspective_changer.html#ab992a41beda18ab79cdac5ed447b2ede", null ],
+    [ "myMouseYPosition", "d1/d4e/class_g_u_i_perspective_changer.html#a805f115173fbaa833d318c53b81717f0", null ],
+    [ "myViewPort", "d1/d4e/class_g_u_i_perspective_changer.html#a4096266d6f466e85756aa363684aa489", null ]
+];
